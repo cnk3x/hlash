@@ -1,0 +1,10 @@
+services:
+    clash:
+        image: dreamacro/clash:latest
+        container_name: clash
+        volumes:
+            - ./data:/root/.config/clash/
+        ports:
+            - 7990-7991:7890-7891
+        network_mode: bridge
+        restart: unless-stopped
